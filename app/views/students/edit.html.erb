@@ -1,0 +1,14 @@
+<h1>テスト問題</h1>
+
+<%= form_for @student do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, :size => 50 %> </p>
+        <%= f.label :profile %>
+    <%= f.text_field :profile, :size => 50 %> </p>
+        <%= f.label :gtade %>
+    <%= f.text_field :gtade, :size => 50 %> </p>
+        <%= f.label :mentor %>
+    <%= f.text_field :mentor, :size => 50 %> </p>
+    <%= f.submit "編集する" %>
+<% end %>
+

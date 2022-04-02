@@ -1,0 +1,21 @@
+<h1>テスト問題</h1>
+<%= stylesheet_link_tag 'new', :media => "all" %>
+<div class="post-container">
+    <p class="title">投稿フォーム</p>
+    <%= form_for @student do |f| %>
+    <div class="field">
+
+    <%= f.label :名前 %>
+    <p><%= f.text_field :name, :size => 50 %></p>
+    <%= f.label :メンター %>
+    <p><%= f.text_field :mentor, :size => 50 %></p>
+    <%= f.label :自己紹介 %>
+    <p><%= f.text_field :profile, :size => 50 %></p>
+    <%= f.label :学年 %>
+    <p><%= f.text_field :gtade, :size => 50 %></p>
+
+    </div>
+    <%= f.submit "投稿する"%>
+<% end %>
+<%= link_to "投稿一覧に戻る", students_path %>
+</div>

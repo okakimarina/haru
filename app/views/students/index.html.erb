@@ -1,0 +1,23 @@
+<h1>テスト問題</h1>
+<% if user_signed_in? %>
+<%= button_to 'ログアウト', destroy_user_session_path, method: :delete %>
+<% end %>
+
+<%= link_to "新規投稿へ", new_student_path %>
+<%= stylesheet_link_tag 'index', :media => "all" %>
+<div class="post-container">
+<div class="students-container">
+    <% @students.each do |t| %>
+    <div class="student">
+    <p><%= t.name %></p>
+    <p><%= t.mentor %></p>
+    <p><%= t.profile %></p>
+    <p><%= t.gtade %></p>
+    <p><%= t.created_at %></p>
+    <%= link_to "詳細へ", student_path(t.id) %>
+    <%= link_to "編集する", edit_student_path(t.id) %>
+    <%= button_to "削除する", student_path(t.id), method: :delete %>
+    </div>
+    <% end %>
+</div>
+
